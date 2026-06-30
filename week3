@@ -1,0 +1,39 @@
+rc={"1.": "Move Forward",
+    "2.": "Turn Left",
+    "3.": "Turn Right",
+    "4.": "Stop"}
+while True:
+    print("==== ROBOT CONTROL ====")
+    
+
+    for i in rc:
+        print(i,rc[i])
+
+    print()    
+
+
+
+    try:
+        choice=int(input("Enter a choice: "))
+
+        if choice == 1:
+            print("\nRobot moving forward...\n")
+
+        elif choice == 2:
+            print("\nRobot turning left...\n")
+
+        elif choice == 3:
+            print("\nRobot turning right...\n")
+
+        elif choice == 4:
+            print("\nRobot shutting down...")
+            print("Mission completed successfully.")
+            break
+
+        else:
+            print("\nUnknown command.")
+            print("Please choose a number between 1 and 4.\n")
+
+    except ValueError:
+        print("\nInvalid input.")
+        print("Please enter a valid integer.\n")
