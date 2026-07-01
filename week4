@@ -1,0 +1,26 @@
+import random
+
+actions = [
+    "Scanning surroundings...",
+    "Checking battery...",
+    "Looking left...",
+    "Looking right...",
+    "Checking Wi-Fi...",
+    "Monitoring sensors...",
+    "Blinking status LED..."
+]
+
+print("==== ROBOT IDLE MODE ===="+"\n")
+
+
+number_of_actions=int(input("how many idle actions? "))
+print()
+action_number=1
+for _ in range(number_of_actions):
+    print("Idle Action",action_number)
+    print("--------------------------")
+    print(random.choice(actions))
+    print()
+    action_number+=1
+
+print("Robot is waiting for commands.")
